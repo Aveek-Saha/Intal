@@ -1,8 +1,8 @@
-# Intal - **Int**egers of **A**rbitrary **L**ength
+# Integers of Arbitrary Length
 
 Intal is short for **Int**egers of **A**rbitrary **L**ength. 
 
-An intal (an integer of arbitrary length) is an object pointed by a `void*` pointer. An intal can be created by `intal_create()` by providing a char string of a nonnegative integer provided in decimal digits. Some intals are created out of some functionalities like `intal_add()`, which creates a new intal.
+An intal (an integer of arbitrary length) is an object pointed to by a `void*` pointer. An intal can be created by `intal_create()` by providing a char string of a nonnegative integer provided in decimal digits. Some intals are created out of some functionalities like `intal_add()`, which creates a new intal.
 
 Responsibility of destroying the intals created lies with the client by calling `intal_destroy()`, which will free whatever memory allocated during the creation of intal.
 
