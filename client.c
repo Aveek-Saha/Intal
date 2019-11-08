@@ -22,36 +22,35 @@ int main(int argc, char const *argv[]) {
 	void *exp;
 	char *ans; 
 		
-	intal1 = intal_create(str1); //4999
+	intal1 = intal_create(str1);
 	assert(intal1);
-	intal2 = intal_create(str2); //2001
-	//intal3 = intal_create(str3); //NaN
-	//assert(!intal3);
+	intal2 = intal_create(str2);
+	
 	strcpy(str3, "PESU");
 	intal3 = intal_create(str3);//0
 
 	str4 = intal2str(intal1);
-	printf("First intal: %s\n", str4); //4999
+	printf("First intal: %s\n", str4); 
 	free(str4);
 
 	str4 = intal2str(intal2);
-	printf("Second intal: %s\n", str4); //2001
+	printf("Second intal: %s\n", str4); 
 	free(str4);
 
 	str4 = intal2str(intal3);
-	printf("Third intal: %s\n", str4); //0
+	printf("Third intal: %s\n", str4);
 	free(str4);
 
-	intal1 = intal_increment(intal1); //5000
-	intal2 = intal_decrement(intal2); //2000
-	intal3 = intal_decrement(intal3); //0
+	intal1 = intal_increment(intal1);
+	intal2 = intal_decrement(intal2); 
+	intal3 = intal_decrement(intal3);
 
 	printf("Intals after increment and decrement:\n");
 	str4 = intal2str(intal1);
-	printf("%s\n", str4); //5000
+	printf("%s\n", str4); 
 	free(str4);
 	str4 = intal2str(intal2);
-	printf("%s\n", str4); //2000
+	printf("%s\n", str4); 
 	free(str4);
 	str4 = intal2str(intal3);
 	printf("%s\n", str4); //0
@@ -59,29 +58,29 @@ int main(int argc, char const *argv[]) {
 
 	str5 = intal2str(intal1);
 	str6 = intal2str(intal2);
-	printf("Max of two intals: %s\n", //5000
+	printf("Max of two intals: %s\n", 
 		(intal_compare(intal1, intal2) > 0) ? str5 : str6);
 
 	free(str5);
 	free(str6);	
 
 
-	sum = intal_add(intal1, intal2); //7000
+	sum = intal_add(intal1, intal2);
 	ans = intal2str(sum);
 	printf("Sum: %s\n", ans);
 	free(ans);
 
-	diff = intal_diff(intal1, intal2); //3000
+	diff = intal_diff(intal1, intal2); 
 	ans = intal2str(diff);	
 	printf("Diff: %s\n", ans);
 	free(ans);
 
-	product = intal_multiply(intal1, intal2); //10000000
+	product = intal_multiply(intal1, intal2); 
 	ans = intal2str(product);
 	printf("Product: %s\n", ans);
 	free(ans);
 
-	quotient = intal_divide(intal1, intal2); //2
+	quotient = intal_divide(intal1, intal2); 
 	ans = intal2str(quotient);
 	printf("Quotient: %s\n", ans);
 	free(ans);
@@ -89,7 +88,7 @@ int main(int argc, char const *argv[]) {
 	str5 = intal2str(intal1);
 	str6 = intal2str(quotient);
 
-	exp = intal_pow(intal1, quotient); //5000^2 = 25000000
+	exp = intal_pow(intal1, quotient); 
 	ans = intal2str(exp);	
 	printf("%s ^ %s: %s\n", str5, str6, ans);
 	free(ans);
