@@ -33,29 +33,12 @@ The operations that can be done on intals are-
 	 $ gcc -Wall intal.c client.o -lm -lrt -o intal.out
 	 $ ./intal.out
 	 ```
-### Test for memory leaks with valgrind
-```
-$ valgrind --tool=memcheck ./intal.out
-```
+3. Test for memory leaks with valgrind
+	```
+	$ valgrind --tool=memcheck ./intal.out
+	```
 
-For example if you run this after running the sanity check, the output will be something like this
-```
-==12256== Memcheck, a memory error detector
-==12256== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==12256== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==12256== Command: ./intal.out
-==12256== 
-Sanity check done. If you don't see any "FAILED" messages above, everything works!.
-==12256== 
-==12256== HEAP SUMMARY:
-==12256==     in use at exit: 0 bytes in 0 blocks
-==12256==   total heap usage: 122 allocs, 122 frees, 1,855 bytes allocated
-==12256== 
-==12256== All heap blocks were freed -- no leaks are possible
-==12256== 
-==12256== For lists of detected and suppressed errors, rerun with: -s
-==12256== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-```
+
 	 
 	 
 	 
