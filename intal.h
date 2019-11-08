@@ -17,9 +17,9 @@
  * intal_compare() returns 0, but that doesn't both intals are equal.
  */
 
-/* All the functions, whenever they return an intal, it should have
+/* All the functions, whenever they return an intal, have been
  * stripped off the leading zeros. For example, addition of "0123" and
- * "55" should be returned as "178".
+ * "55" is returned as "178".
  */
 
 //String (array of chars with a null termination) of decimal digits converted to intal type.
@@ -33,14 +33,7 @@
 //The memory allocated by this function is pointed by the pointer it returns. The client has no idea
 // what kind of object it is. It could be a pointer to char array, int array, long int array, double array, or
 // a struct array. There is no theoretical limit to the size of the integer, but memory limitations of the 
-// process (Operating System). If the OS allows, your library should be able to hold the largest prime number
-// known, which is 23,249,425 digits long (as of Feb 2018).
-//intal_create() works more like atoi() which converts the initial portion of the 
-// string. That is, if considers only decimal digits, and as soon as it it parses 
-// a non-digit, it just processes whatever digits it has already received. If the first 
-// char is a non-digit, it returns 0. If you’ve already submitted with a different
-// behavior, don’t worry because we are not going to test with invalid input string
-// for this function.
+// process (Operating System). 
 void* intal_create(const char* str);
 
 //Destroy the created "object".
