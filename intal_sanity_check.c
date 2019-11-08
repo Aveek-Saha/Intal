@@ -38,7 +38,7 @@ int main(int argc, char const *argv[]) {
 	void *quotient2;
 	void *exp;
 
-	//In our test-cases we'll always give valid nonnegative integers as input for intal_create()
+	//Give valid nonnegative integers as input for intal_create()
 	intal1 = intal_create(str1); //4999
 	intal_test(intal1, "4999");
 	intal2 = intal_create(str2); //2001
@@ -46,7 +46,7 @@ int main(int argc, char const *argv[]) {
 	intal3= intal_create(str3); //0
 	intal_test(intal3,"0");
 
-	//In our test-cases we'll never give null pointer as an argument for an intal
+	//Don't give null pointer as an argument for an intal
 	intal1 = intal_increment(intal1); //5000
 	intal2 = intal_decrement(intal2); //2000
 	intal3 = intal_decrement(intal3); //0
@@ -56,7 +56,6 @@ int main(int argc, char const *argv[]) {
 
 	//Max of two intals: 5000
 	//intal max is not a new object and it need not destroyed when we are done with it
-	//In our test-cases, as we are not going to give null pointers as input, don't worry as that case for now
 	max = (intal_compare(intal1, intal2) > 0) ? intal1 : intal2;
 	intal_test(max,"5000");
 		
@@ -96,6 +95,6 @@ int main(int argc, char const *argv[]) {
 	intal_destroy(intal1);	
 	intal_destroy(intal2);
 	intal_destroy(intal3);
-	printf("Sanity check done. If you see any \"FAILED\" messages above, make sure you fix them and then submit your code.\n");
+	printf("Sanity check done. If you don't see any \"FAILED\" messages above, everything works!.\n");
 	return 0;
 }
